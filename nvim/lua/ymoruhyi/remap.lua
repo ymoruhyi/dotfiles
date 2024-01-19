@@ -66,3 +66,20 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous dia
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
+
+local enabled = true
+local toggle_diagnostics = function ()
+  enabled = not enabled
+  if enabled then
+    vim.diagnostic.enable()
+    print("Enabled diagnostics")
+  else
+    vim.diagnostic.disable()
+    print("Disabled diagnostics")
+  end
+end
+
+vim.keymap.set('n', '<leader>ud', toggle_diagnostics, { desc = 'Toogle Diagnostic' })
+
+-- eslint_d fix current buffer
+vim.api.nvim_set_keymap('n', '<leader>xb', [[mF:%!eslint_d --stdin --fix-to-stdout<CR>`F]], {noremap = true, silent = true, desc = 'Linter fix buffer'})
