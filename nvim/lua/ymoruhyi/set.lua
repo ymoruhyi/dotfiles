@@ -12,13 +12,15 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = 'yes'
 vim.o.splitright = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.cursorline = false
 vim.o.undofile = true
 vim.o.textwidth = 80
+vim.o.formatoptions='want'
+vim.o.autoindent = true
 
 -- not sure if really want this
 vim.opt.backup = false
