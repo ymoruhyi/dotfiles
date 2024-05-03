@@ -49,9 +49,9 @@ vim.keymap.set("n", "<M-h>", "<C-w>h")
 vim.keymap.set("n", "<M-j>", "<C-w>j")
 vim.keymap.set("n", "<M-k>", "<C-w>k")
 
--- shortcuts for faster window resizing
-vim.keymap.set("n", "<M-<>", "<C-w><")
-vim.keymap.set("n", "<M->>", "<C-w>>")
+-- shortcuts for faster window resizing (not working in iterm2 on mac)
+-- vim.keymap.set("n", "<M-<>", "<C-w><")
+-- vim.keymap.set("n", "<M->>", "<C-w>>")
 
 -- Terminal window remaps for easier window navigation
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")

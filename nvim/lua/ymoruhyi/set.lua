@@ -18,6 +18,7 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.cursorline = false
 vim.o.undofile = true
+vim.o.textwidth = 80
 
 -- not sure if really want this
 vim.opt.backup = false

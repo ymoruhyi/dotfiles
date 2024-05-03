@@ -50,6 +50,7 @@ return {
     require('mason-lspconfig').setup()
 
     local servers = {
+      marksman = {},
       tsserver = {
         settings = {
           typescript = {
