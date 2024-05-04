@@ -98,6 +98,7 @@ return {
           },
         },
         marksman = {},
+        markdownlint = {},
         tsserver = {
           settings = {
             typescript = {
