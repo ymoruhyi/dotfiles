@@ -18,8 +18,6 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.cursorline = false
 vim.o.undofile = true
-vim.o.textwidth = 80
-vim.o.formatoptions='want'
 vim.o.autoindent = true
 
 -- not sure if really want this
