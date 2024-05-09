@@ -23,9 +23,9 @@ return {
       styles = {
         transparency = true
       },
-      -- highlight_groups = {
-      --   NormalFloat = { bg = 'none' }
-      -- },
+      highlight_groups = {
+        TroubleNormal = { bg = 'none' }
+      },
       -- disable_background = true
     },
     config = function (_, opts)
