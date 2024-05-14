@@ -97,6 +97,7 @@ return {
             },
           },
         },
+        biome = {},
         marksman = {},
         tsserver = {
           settings = {
