@@ -82,4 +82,5 @@ end
 vim.keymap.set('n', '<leader>ud', toggle_diagnostics, { desc = 'Toogle Diagnostic' })
 
 -- eslint_d fix current buffer
-vim.api.nvim_set_keymap('n', '<leader>xb', [[mF:%!eslint_d --stdin --fix-to-stdout<CR>`F]], {noremap = true, silent = true, desc = 'Linter fix buffer'})
+-- vim.api.nvim_set_keymap('n', '<leader>xb', [[mF:%!eslint_d --stdin --fix-to-stdout<CR>`F]], {noremap = true, silent = true, desc = 'Linter fix buffer'})
+
