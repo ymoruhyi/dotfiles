@@ -23,10 +23,29 @@ require("lazy").setup({
 	{ import = "ymoruhyi/plugins" },
 	"ThePrimeagen/git-worktree.nvim",
 }, {
+		defaults = { lazy = false },
 		ui = {
-			border = "single",
+			border = "rounded",
 		},
-		change_detection = {
-			enabled = false,
+		-- change_detection = {
+		-- 	enabled = false,
+		-- },
+		performance = {
+			cache = {
+				enabled = true,
+			},
+			rtp = {
+				disabled_plugins = {
+					-- "matchit",
+					-- "matchparen",
+					-- "netrwPlugin",
+					"gzip",
+					"tarPlugin",
+					"tohtml",
+					"tutor",
+					"zipPlugin",
+				},
+			},
 		},
+		debug = false,
 })
