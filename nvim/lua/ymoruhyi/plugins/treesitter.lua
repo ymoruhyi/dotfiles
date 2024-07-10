@@ -3,7 +3,7 @@ return {
   version = false,
   build = ":TSUpdate",
   cmd = { "TSUpdateSync", "TSUpdate", "TSInstall" },
-  event = { "VeryLazy" },
+  event = "BufReadPost",
   lazy = vim.fn.argc(-1) == 0, -- load treesitter early when opening a file from the cmdline
   keys = {
     { "<c-space>", desc = "Increment Selection" },

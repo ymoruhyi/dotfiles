@@ -1,36 +1,28 @@
 return {
-  -- snippets
-  {
-    "L3MON4D3/LuaSnip",
-    dependencies = {
-      "rafamadriz/friendly-snippets",
-      config = function()
-        require("luasnip.loaders.from_vscode").lazy_load()
-      end,
-    },
-    opts = {
-      history = true,
-      delete_check_events = "TextChanged",
-    },
-    keys = {
-      -- {
-      --   "<C-l>",
-      --   function()
-      --     return require("luasnip").jumpable(1) and "<Plug>luasnip-jump-next" or "<tab>"
-      --   end,
-      --   expr = true, silent = true, mode = "i",
-      -- },
-      { "<C-l>", function() require("luasnip").jump(1) end, mode = { "s", "i" }},
-      { "<C-h>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
-    },
-  },
-
   -- auto completion
   {
     "hrsh7th/nvim-cmp",
     version = false, -- last release is way too old
     event = "InsertEnter",
     dependencies = {
+      -- snippets
+      {
+        "L3MON4D3/LuaSnip",
+        dependencies = {
+          "rafamadriz/friendly-snippets",
+          config = function()
+            require("luasnip.loaders.from_vscode").lazy_load()
+          end,
+        },
+        opts = {
+          history = true,
+          delete_check_events = "TextChanged",
+        },
+        keys = {
+          { "<C-l>", function() require("luasnip").jump(1) end, mode = { "s", "i" }},
+          { "<C-h>", function() require("luasnip").jump(-1) end, mode = { "i", "s" } },
+        },
+      },
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
@@ -100,14 +92,6 @@ return {
       local cmp = require('cmp')
 
       cmp.setup(opts)
-
-      -- Setup autocomplete for / searches (buffer source)
-      -- cmp.setup.cmdline({ '/', '?' }, {
-      --   mapping = cmp.mapping.preset.cmdline(),
-      --   sources = {
-      --     { name = 'buffer' }
-      --   }
-      -- })
     end,
   },
 }
