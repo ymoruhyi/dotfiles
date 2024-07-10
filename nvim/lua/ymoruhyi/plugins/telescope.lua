@@ -12,24 +12,18 @@ return {
       end,
       config = function()
         require('telescope').load_extension('fzf')
-        -- require('telescope').load_extension('git_worktree')
-        -- local builtin = require('telescope.builtin')
-        --
-        -- vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find Files' })
-        -- vim.keymap.set('n', '<leader>fg', builtin.git_files, { desc = 'Find Git files' })
-        -- vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = 'Search Help' })
-        -- vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Live Grep' })
-        -- vim.keymap.set('n', '<leader>wa', require('telescope').extensions.git_worktree.create_git_worktree,
-        -- { desc = 'Create Git Worktree' })
-        -- vim.keymap.set('n', '<leader>wl', require('telescope').extensions.git_worktree.git_worktrees,
-        -- { desc = 'List Git Worktrees' })
       end
     },
   },
   keys = {
     { '<leader>ff', "<cmd>Telescope find_files<cr>", desc = "Find Files (Root Dir)" },
     { '<leader>fg', "<cmd>Telescope git_files<cr>", desc = "Find Git Files (Root Dir)" },
+    { "<leader>fb", "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>", desc = "Buffers" },
     { '<leader>sh', "<cmd>Telescope help_tags<cr>", desc = "Search Help" },
     { '<leader>sg', "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
+    { "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Buffer" },
+    { "<leader>sd", "<cmd>Telescope diagnostics bufnr=0<cr>", desc = "Document Diagnostics" },
+    { "<leader>sD", "<cmd>Telescope diagnostics<cr>", desc = "Workspace Diagnostics" },
+    { '<leader>s"', "<cmd>Telescope registers<cr>", desc = "Registers" },
   },
 }

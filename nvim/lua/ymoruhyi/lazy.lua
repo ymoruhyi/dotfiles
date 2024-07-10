@@ -23,9 +23,6 @@ require("lazy").setup({
     ui = {
       border = "rounded",
     },
-    -- change_detection = {
-    -- 	enabled = false,
-    -- },
     performance = {
       cache = {
         enabled = true,
@@ -34,7 +31,7 @@ require("lazy").setup({
         disabled_plugins = {
           -- "matchit",
           -- "matchparen",
-          -- "netrwPlugin",
+          "netrwPlugin",
           "gzip",
           "tarPlugin",
           "tohtml",
