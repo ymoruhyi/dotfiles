@@ -1,4 +1,9 @@
 return {
+  { "tpope/vim-fugitive", lazy = false },
+
+  -- easy commenting
+  { "numToStr/Comment.nvim", opts = {} },
+
   -- Finds and lists all of the TODO, HACK, BUG, etc comment
   -- in your project and loads them into a browsable list.
   {

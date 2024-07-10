@@ -12,14 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  "tpope/vim-fugitive",
-  { "numToStr/Comment.nvim", opts = {} },
-  { "mbbill/undotree" },
-  { "tpope/vim-sleuth" },
-  "ThePrimeagen/git-worktree.nvim",
+  -- "tpope/vim-fugitive",
+  -- { "mbbill/undotree" },
+  -- { "tpope/vim-sleuth" },
+  -- "ThePrimeagen/git-worktree.nvim",
   { import = "ymoruhyi/plugins" },
 }, {
-    defaults = { lazy = false },
+    defaults = { lazy = true },
     ui = {
       border = "rounded",
     },

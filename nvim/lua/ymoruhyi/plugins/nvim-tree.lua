@@ -1,11 +1,11 @@
 return {
-	"nvim-tree/nvim-tree.lua",
-	dependencies = {
-		"nvim-tree/nvim-web-devicons",
-	},
-	keys = {
-		{ "<leader>pv", ":NvimTreeToggle<CR>", desc = "Toggle tree" },
-	},
+  "nvim-tree/nvim-tree.lua",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  keys = {
+    { "<leader>pv", ":NvimTreeToggle<CR>", desc = "Toggle tree" },
+  },
   opts = {
     view = {
       relativenumber = true,
