@@ -1,14 +1,10 @@
 return {
   {
-    'mason.nvim',
-    config = function ()
-      require('mason').setup()
-    end
-  },
-  {
     'neovim/nvim-lspconfig',
+    event = "BufReadPost",
     dependencies = {
-      'williamboman/mason-lspconfig.nvim',
+      { "williamboman/mason.nvim", opts = {}, run = ":MasonUpdate" }, -- installing LSPs automaticlly
+      { "williamboman/mason-lspconfig.nvim", config = function() end }, -- lsp configuration for mason lsp
       'folke/neodev.nvim',
     },
     config = function()
@@ -164,7 +160,6 @@ return {
 
       -- lspconfig.lua_ls.setup({ capabilities = capabilities, handlers = handlers })
       -- lspconfig.tsserver.setup({ capabilities = capabilities, handlers = handlers })
-
     end
   }
 }

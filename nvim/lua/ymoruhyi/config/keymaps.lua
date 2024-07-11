@@ -1,9 +1,7 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = 'Project View' })
+-- vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = 'Project View' })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("v", ">", ">gv")
@@ -49,10 +47,6 @@ vim.keymap.set("n", "<M-h>", "<C-w>h")
 vim.keymap.set("n", "<M-j>", "<C-w>j")
 vim.keymap.set("n", "<M-k>", "<C-w>k")
 
--- shortcuts for faster window resizing (not working in iterm2 on mac)
--- vim.keymap.set("n", "<M-<>", "<C-w><")
--- vim.keymap.set("n", "<M->>", "<C-w>>")
-
 -- Terminal window remaps for easier window navigation
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("t", "<M-v><Esc>", "<Esc>")
@@ -64,8 +58,6 @@ vim.keymap.set("t", "<M-k>", "<C-\\><C-n><C-w>k")
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next diagnostic message' })
-vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Open floating diagnostic message' })
-vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
 local enabled = true
 local toggle_diagnostics = function ()
@@ -80,6 +72,8 @@ local toggle_diagnostics = function ()
 end
 
 vim.keymap.set('n', '<leader>ud', toggle_diagnostics, { desc = 'Toogle Diagnostic' })
+
+-- TODO: add lazygit keymaps
 
 -- eslint_d fix current buffer
 -- vim.api.nvim_set_keymap('n', '<leader>xb', [[mF:%!eslint_d --stdin --fix-to-stdout<CR>`F]], {noremap = true, silent = true, desc = 'Linter fix buffer'})
