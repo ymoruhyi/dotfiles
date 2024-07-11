@@ -12,10 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- "tpope/vim-fugitive",
-  -- { "mbbill/undotree" },
-  -- { "tpope/vim-sleuth" },
-  -- "ThePrimeagen/git-worktree.nvim",
   { import = "ymoruhyi/plugins" },
 }, {
     defaults = { lazy = true },
