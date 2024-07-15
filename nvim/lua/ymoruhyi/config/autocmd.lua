@@ -12,13 +12,32 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
--- set textwidth for markdown files
+-- -- set textwidth for markdown files
+-- vim.api.nvim_create_autocmd("FileType", {
+--   group = augroup('md_width'),
+--   pattern = { 'markdown' },
+--   callback = function()
+--     vim.opt_local.textwidth = 120
+--     vim.opt_local.formatoptions='want'
+--   end,
+-- })
+
+-- wrap and check for spell in text filetypes
 vim.api.nvim_create_autocmd("FileType", {
-  group = augroup('md_width'),
-  pattern = { 'markdown' },
+  group = augroup("wrap_spell"),
+  pattern = { "text", "plaintex", "typst", "gitcommit", "markdown" },
   callback = function()
-    vim.opt_local.textwidth = 120
-    vim.opt_local.formatoptions='want'
+    vim.opt_local.wrap = true
+    vim.opt_local.spell = true
+  end,
+})
+
+-- Fix conceallevel for json files
+vim.api.nvim_create_autocmd({ "FileType" }, {
+  group = augroup("json_conceal"),
+  pattern = { "json", "jsonc", "json5" },
+  callback = function()
+    vim.opt_local.conceallevel = 0
   end,
 })
 

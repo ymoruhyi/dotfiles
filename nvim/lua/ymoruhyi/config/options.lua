@@ -37,6 +37,7 @@ opt.undolevels = 10000
 opt.updatetime = 200 -- Save swap file and trigger CursorHold
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
+opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0

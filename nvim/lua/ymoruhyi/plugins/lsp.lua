@@ -3,7 +3,11 @@ return {
     'neovim/nvim-lspconfig',
     event = "BufReadPost",
     dependencies = {
-      { "williamboman/mason.nvim", opts = {}, run = ":MasonUpdate" }, -- installing LSPs automaticlly
+      {
+        "williamboman/mason.nvim",
+        opts = {},
+        run = ":MasonUpdate"
+      }, -- installing LSPs automaticlly
       { "williamboman/mason-lspconfig.nvim", config = function() end }, -- lsp configuration for mason lsp
       'folke/neodev.nvim',
     },
