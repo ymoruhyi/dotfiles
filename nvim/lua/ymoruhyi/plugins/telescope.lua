@@ -15,6 +15,21 @@ return {
       end
     },
   },
+  opts = function ()
+    local open_with_trouble = function(...)
+      return require("trouble.sources.telescope").open(...)
+    end
+
+    return {
+      defaults = {
+        mappings = {
+          i = {
+            ["<c-t>"] = open_with_trouble,
+          }
+        }
+      },
+    }
+  end,
   keys = {
     { '<leader>ff', function () require('telescope.builtin').find_files() end, desc = "Find Files (Root Dir)" },
     { '<leader>fg', function () require('telescope.builtin').git_files() end, desc = "Find Git Files (Root Dir)" },
@@ -25,5 +40,6 @@ return {
     { "<leader>sd", function () require('telescope.builtin').diagnostics({ bufnr=0 }) end, desc = "Document Diagnostics" },
     { "<leader>sD", function () require('telescope.builtin').diagnostics() end, desc = "Workspace Diagnostics" },
     { '<leader>s"', function () require('telescope.builtin').registers() end, desc = "Registers" },
+    { '<leader>ss', function () require('telescope.builtin').lsp_document_symbols() end, desc = "Search Symbols" },
   },
 }
