@@ -14,6 +14,7 @@ return {
         nls.formatting.goimports_reviser,
         nls.formatting.gofumpt,
         nls.formatting.golines,
+        -- nls.formatting.biome,
       },
       on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then

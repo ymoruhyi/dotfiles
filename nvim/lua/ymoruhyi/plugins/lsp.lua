@@ -128,6 +128,10 @@ return {
             diagnostics = { disable = { 'missing-fields' } },
           },
         },
+        templ = {},
+        html = {},
+        htmx = {},
+        tailwindcss = {},
       }
 
       require('neodev').setup()
