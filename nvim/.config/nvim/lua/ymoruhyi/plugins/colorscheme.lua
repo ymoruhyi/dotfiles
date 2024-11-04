@@ -22,10 +22,13 @@ return {
     opts = {
       variant = 'main',
       styles = {
-        transparency = true
+        transparency = true,
+        italic = false,
       },
       highlight_groups = {
         TroubleNormal = { bg = 'none' }
+        -- uncomment if you want comments to be in italic
+        -- Comment = { italic = true }
       },
       -- disable_background = true
     },
