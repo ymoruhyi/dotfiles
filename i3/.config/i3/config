@@ -190,6 +190,19 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# $mod+Shift+S correspond to PrtSc button on my Lenovo PC keyboard
+# bindsym $mod+Shift+S exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+# Screenshots
+bindsym $mod+x exec --no-startup-id maim "/home/$USER/Pictures/screenshots/$(date)"
+bindsym Shift+$mod+x exec --no-startup-id maim --select "/home/$USER/Pictures/screenshots/$(date)"
+# bindsym Ctrl+$mod+x exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/screenshots/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+$mod+x exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+$mod+x exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+# bindsym Ctrl+$mod+x exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+
 # polybar setup
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
