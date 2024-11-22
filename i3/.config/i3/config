@@ -159,9 +159,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-assign [class="Google-chrome"] $ws10
-assign [class="firefox"] $ws9
-assign [class="thunderbird"] $ws8
+assign [class="Google-chrome"] $ws5
+assign [class="firefox"] $ws4
+assign [class="thunderbird"] $ws3
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
