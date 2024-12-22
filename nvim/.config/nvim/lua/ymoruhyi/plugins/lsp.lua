@@ -99,7 +99,7 @@ return {
         },
         biome = {},
         marksman = {},
-        tsserver = {
+        ts_ls = {
           settings = {
             typescript = {
               format = {

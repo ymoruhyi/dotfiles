@@ -6,22 +6,20 @@ return {
       plugins = { spelling = true },
       defaults = {
         mode = { "n", "v" },
-        ["g"] = { name = "+goto" },
-        ["]"] = { name = "+next" },
-        ["["] = { name = "+prev" },
-        ["<leader>c"] = { name = "+code" },
-        ["<leader>f"] = { name = "+file/find" },
-        ["<leader>p"] = { name = "+project" },
-        ["<leader>h"] = { name = "+harpoon/hunk" },
-        ["<leader>s"] = { name = "+search" },
-        ["<leader>x"] = { name = "+diagnostics/quickfix" },
-        ["<leader>w"] = { name = "+git-worktree" },
+        {"g", name = "+goto" },
+        {"]", name = "+next" },
+        {"[", name = "+prev" },
+        {"<leader>c", desc = "+code" },
+        {"<leader>f", desc = "+file/find" },
+        {"<leader>p", desc = "+project" },
+        {"<leader>h", desc = "+harpoon/hunk" },
+        {"<leader>s", desc = "+search" },
+        {"<leader>x", desc = "+diagnostics/quickfix" },
       },
     },
     config = function(_, opts)
       local wk = require("which-key")
-      wk.setup(opts)
-      wk.register(opts.defaults)
+      wk.add(opts.defaults)
     end,
   }
 }
