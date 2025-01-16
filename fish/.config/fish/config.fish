@@ -3,6 +3,9 @@ if status is-interactive
     abbr --add gst git status
     abbr --add v nvim
     abbr --add k kubectl
+    abbr --add kpods kubectl get pods -o wide
+    abbr --add kswitch kubectl config use-context
+    abbr --add kcontexts kubectl config get-contexts
 
     # Start the SSH agent
     eval "$(ssh-agent -c)"
