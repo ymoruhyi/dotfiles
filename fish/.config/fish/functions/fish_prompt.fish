@@ -86,5 +86,7 @@ function fish_prompt
         end
     end
 
-    echo -n -s $arrow ' '$cwd $repo_info $normal ' '
+    set -l kube $green(__kube_prompt)
+
+    echo -n -s $arrow ' '$cwd $repo_info $kube $normal ' '
 end
