@@ -15,6 +15,7 @@ return {
         {"<leader>h", desc = "+harpoon/hunk" },
         {"<leader>s", desc = "+search" },
         {"<leader>x", desc = "+diagnostics/quickfix" },
+        {"<leader>a", desc = "AI" },
       },
     },
     config = function(_, opts)
