@@ -5,10 +5,7 @@ return {
   opts = {
     dashboard = { enabled = false },
   },
-  config = function(_, opts)
-    require("snacks").setup(opts)
-  end,
   keys = {
-    { "<leader>gg", function() require("snacks").lazygit() end, desc = "Lazygit" },
+    { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
   },
 }

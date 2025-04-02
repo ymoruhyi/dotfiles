@@ -7,6 +7,9 @@ if status is-interactive
     abbr --add kswitch kubectl config use-context
     abbr --add kcontexts kubectl config get-contexts
 
+    set -x GPG_TTY "$(tty)"
+    alias docker-compose="docker compose"
+
     # Start the SSH agent
     eval "$(ssh-agent -c)"
 
