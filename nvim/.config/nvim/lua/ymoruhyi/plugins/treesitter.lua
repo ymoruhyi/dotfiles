@@ -57,6 +57,7 @@ return {
       "xml",
       "yaml",
       "templ",
+      "go",
     },
     incremental_selection = {
       enable = true,

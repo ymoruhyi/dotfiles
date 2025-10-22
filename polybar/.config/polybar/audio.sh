@@ -47,7 +47,7 @@ case "$1" in
     ;;
   "click-right")
     # Display output device menu (using rofi or any other menu system)
-    DEVICE=$(list_output_devices | rofi -dmenu -p "Select output device:" -location 0 -width 30 -lines 10)
+    DEVICE=$(list_output_devices | rofi -dmenu -p "Select output device" -location 0 -width 30 -lines 10)
     if [[ -n "$DEVICE" ]]; then
       set_output_device "$DEVICE"
     fi

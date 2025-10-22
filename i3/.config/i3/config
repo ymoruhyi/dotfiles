@@ -33,6 +33,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+exec --no-startup-id picom
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -159,9 +160,9 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-assign [class="Google-chrome"] $ws5
-assign [class="firefox"] $ws4
-assign [class="thunderbird"] $ws3
+assign [class="Google-chrome"] $ws10
+assign [class="firefox"] $ws9
+assign [class="thunderbird"] $ws8
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -194,9 +195,11 @@ bindsym $mod+r mode "resize"
 # bindsym $mod+Shift+S exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
 # Screenshots
-bindsym $mod+x exec --no-startup-id maim "/home/$USER/Pictures/screenshots/$(date)"
-bindsym Shift+$mod+x exec --no-startup-id maim --select "/home/$USER/Pictures/screenshots/$(date)"
+bindsym $mod+x exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date)"
+bindsym Shift+$mod+x exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date)"
 # bindsym Ctrl+$mod+x exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/screenshots/$(date)"
+
+bindsym $mod+m exec --no-startup-id ~/.config/polybar/monitors.sh
 
 ## Clipboard Screenshots
 bindsym Ctrl+$mod+x exec --no-startup-id maim | xclip -selection clipboard -t image/png
@@ -207,8 +210,8 @@ bindsym Ctrl+Shift+$mod+x exec --no-startup-id maim --select | xclip -selection 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # My monitor setup
-exec_always xrandr --output eDP --off --output HDMI-A-0 --primary --mode 2560x1440 --pos 0x0 --rotate normal --output DisplayPort-0 --off
-exec_always feh --bg-scale /usr/share/backgrounds/Mirror_by_Uday_Nakade.jpg
+# exec_always xrandr --output eDP-1 --off --output HDMI-1 --primary --mode 2560x1440 --pos 0x0 --rotate normal
+exec_always feh --bg-scale /usr/share/backgrounds/Fuji_san_by_amaral.png
 
 # set primary Rosé Pine colorscheme colors
 set $base           #191724
