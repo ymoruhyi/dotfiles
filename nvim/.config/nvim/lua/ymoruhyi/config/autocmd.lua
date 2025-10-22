@@ -28,7 +28,14 @@ local templ_format = function()
     })
 end
 
+-- i had to disable this because of the whitespace formatting issue while rendering transcript (audionotes.io)
 vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = templ_format })
+-- callback = function()
+-- local bufname = vim.fn.expand("%:p")
+-- -- Replace 'specific-file.templ' with the actual file name you want to exclude
+-- if not bufname:match("audioPlayer.templ$") then
+--   templ_format()
+-- end
 
 -- -- set textwidth for markdown files
 -- vim.api.nvim_create_autocmd("FileType", {

@@ -8,6 +8,7 @@ if status is-interactive
     abbr --add kcontexts kubectl config get-contexts
 
     set -x GPG_TTY "$(tty)"
+    set -gx PATH $PATH $HOME/.krew/bin
     alias docker-compose="docker compose"
 
     # Start the SSH agent

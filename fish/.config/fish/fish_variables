@@ -1,7 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR EDITOR:nvim
-SETUVAR --export GPG_TTY:/dev/pts/11
+SETUVAR --export GPG_TTY:not\x20a\x20tty
 SETUVAR --export LAZYGIT_VERSION:0\x2e46\x2e0
 SETUVAR __fish_initialized:3400
 SETUVAR __kube_ps_enabled:1
