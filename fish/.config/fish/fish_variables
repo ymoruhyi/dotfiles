@@ -49,5 +49,5 @@ SETUVAR fish_pager_color_selected_background:\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
-SETUVAR fish_user_paths:/usr/pgadmin4/bin\x1e/home/ymoruhyi/\x2elocal/bin\x1e/home/ymoruhyi/\x2efly/bin\x1e/home/ymoruhyi/go/bin\x1e/home/ymoruhyi/\x2ecargo/bin\x1e/usr/local/go/bin\x1e/opt/nvim\x2dlinux64/bin
+SETUVAR fish_user_paths:/usr/pgadmin4/bin\x1e/home/ymoruhyi/\x2elocal/bin\x1e/home/ymoruhyi/\x2efly/bin\x1e/home/ymoruhyi/go/bin\x1e/home/ymoruhyi/\x2ecargo/bin\x1e/usr/local/go/bin\x1e/opt/nvim\x2dlinux64/bin\x1e/opt/nvim\x2dlinux\x2dx86_64/bin
 SETUVAR nvm_default_version:22
