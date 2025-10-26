@@ -28,9 +28,9 @@ return {
   },
 
   -- disable trouble
+  -- override nvim-cmp and add cmp-emoji
   { "folke/trouble.nvim", enabled = false },
 
-  -- override nvim-cmp and add cmp-emoji
   {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-emoji" },
