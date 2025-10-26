@@ -7,6 +7,14 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
+-- Disable autoformatting for templ files, without this, go code in templ files is broken
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "templ",
+  callback = function()
+    vim.b.autoformat = false
+  end,
+})
+
 -- format buffer on write for templ files
 local templ_format = function()
   local bufnr = vim.api.nvim_get_current_buf()
@@ -17,7 +25,7 @@ local templ_format = function()
     on_exit = function()
       -- Reload the buffer only if it's still the current buffer
       if vim.api.nvim_get_current_buf() == bufnr then
-        vim.cmd('e!')
+        vim.cmd("e!")
       end
     end,
   })
