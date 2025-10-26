@@ -3,6 +3,9 @@
 SETUVAR EDITOR:nvim
 SETUVAR --export GPG_TTY:not\x20a\x20tty
 SETUVAR --export LAZYGIT_VERSION:0\x2e46\x2e0
+SETUVAR --export SSH_AGENT_PID:2089496
+SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2drk5lVdzssJyA/agent\x2e2089495
+SETUVAR SSH_KEYS_TO_AUTOLOAD:/home/ymoruhyi/\x2essh/id_ed25519\x1e/home/ymoruhyi/\x2essh/id_ed25519\x1e/home/ymoruhyi/\x2essh/id_ed25519\x1e/home/ymoruhyi/\x2essh/id_ed25519
 SETUVAR __fish_initialized:3400
 SETUVAR __kube_ps_enabled:1
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
