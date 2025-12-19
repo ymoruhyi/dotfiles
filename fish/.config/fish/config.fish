@@ -9,6 +9,7 @@ if status is-interactive
 
     set -x GPG_TTY "$(tty)"
     set -gx PATH $PATH $HOME/.krew/bin
+    set -gx PATH $PATH $HOME/.local/scripts
     alias docker-compose="docker compose"
 
     # SSH agent is managed by keychain in conf.d/keychain.fish

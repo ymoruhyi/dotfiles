@@ -6,3 +6,6 @@ debug
 foo.*
 *.log
 data
+
+# Fish shell - auto-generated session-specific variables
+fish/.config/fish/fish_variables
