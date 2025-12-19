@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [[ -x ./.tmux-opener ]]; then
+  ./.tmux-opener
+elif [[ -x ~/.local/scripts/tmux-opener ]]; then
+  ~/.local/scripts/tmux-opener
+fi
+clear
