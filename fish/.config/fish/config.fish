@@ -1,4 +1,17 @@
 if status is-interactive
+    # Disable greeting message
+    set -g fish_greeting
+    
+    # Set default nvm version if not already set
+    if not set -q nvm_default_version
+        set -Ux nvm_default_version v22.12.0
+    end
+    
+    # Ensure nvm version is activated
+    if set -q nvm_default_version && ! command -v node &>/dev/null
+        nvm use --silent $nvm_default_version
+    end
+    
     # Commands to run in interactive sessions can go here
     abbr --add gst git status
     abbr --add v nvim
