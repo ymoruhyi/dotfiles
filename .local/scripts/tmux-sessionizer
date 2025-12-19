@@ -14,10 +14,10 @@ switch_to() {
   fi
 }
 
-if tmux has-session -t="$selected_name" 2>/dev/null; then
+if tmux has-session -t="$selected_name"; then
   switch_to
 else
   tmux new-session -ds $selected_name -c $selected
-  switch_to
   tmux send-keys -t $selected_name "ready-tmux" Enter
+  switch_to
 fi
