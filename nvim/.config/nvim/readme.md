@@ -1,1 +1,0 @@
-# ymoruhyi Neovim config

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+XDG_SESSION_TYPE=x11 /opt/Webex/bin/CiscoCollabHost

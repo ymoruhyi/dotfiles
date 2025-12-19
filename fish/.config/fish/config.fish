@@ -9,13 +9,12 @@ if status is-interactive
 
     set -x GPG_TTY "$(tty)"
     set -gx PATH $PATH $HOME/.krew/bin
+    set -gx PATH $PATH $HOME/.local/scripts
     alias docker-compose="docker compose"
 
-    # Start the SSH agent
-    eval "$(ssh-agent -c)"
-
-    # Add your SSH private key
-    ssh-add ~/.ssh/id_ed25519
+    # SSH agent is managed by keychain in conf.d/keychain.fish
+    # eval "$(ssh-agent -c)"
+    # ssh-add ~/.ssh/id_ed25519
 
     # direnv hood to notice changes in env files
     direnv hook fish | source

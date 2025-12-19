@@ -1,0 +1,11 @@
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+
+# Fish shell - auto-generated session-specific variables
+fish/.config/fish/fish_variables
