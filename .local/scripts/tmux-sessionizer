@@ -4,20 +4,22 @@ selected=$(find ~/projects/cisco ~/projects/personal -mindepth 1 -maxdepth 2 -ty
 if [[ -z "$selected" ]]; then
   exit 0
 fi
-selected_name=$(basename $selected | tr ".,: " "____")
+selected_name=$(basename "$selected" | tr ".,: " "____")
 
 switch_to() {
   if [[ -z "$TMUX" ]]; then
-    tmux attach-session -t $selected_name
+    tmux attach-session -t "$selected_name"
   else
-    tmux switch-client -t $selected_name
+    tmux switch-client -t "$selected_name"
   fi
 }
 
 if tmux has-session -t="$selected_name"; then
   switch_to
 else
-  tmux new-session -ds $selected_name -c $selected
-  tmux send-keys -t $selected_name "ready-tmux" Enter
+  echo "creating new session selected_name " "$selected_name"
+  echo "creating new session selected " "$selected"
+  tmux new-session -ds "$selected_name" -c "$selected"
+  tmux send-keys -t "$selected_name" "ready-tmux" Enter
   switch_to
 fi
