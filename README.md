@@ -8,6 +8,7 @@ stow -t ~ polybar
 stow -t ~ i3
 stow -t ~ tmux
 stow -t ~ kitty
+stow -t ~ zsh
 
 cp -rp .local/scripts $HOME/
 ```
