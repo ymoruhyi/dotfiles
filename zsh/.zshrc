@@ -109,6 +109,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias v='nvim'
 
+export PATH=~/.npm-global/bin:$PATH
+
 if [[ "$PATH" != *".local/scripts"* ]]; then
   export PATH="$HOME/.local/scripts:$PATH"
 fi
