@@ -110,7 +110,14 @@ source $ZSH/oh-my-zsh.sh
 alias v='nvim'
 
 export PATH=~/.npm-global/bin:$PATH
+export PATH=~/go/bin:$PATH
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export PATH="$HOME/.fly/bin:$PATH"
 
 if [[ "$PATH" != *".local/scripts"* ]]; then
   export PATH="$HOME/.local/scripts:$PATH"
 fi
+
+eval "$(direnv hook zsh)"
+
+. "$HOME/.local/bin/env"
