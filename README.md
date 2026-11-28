@@ -3,12 +3,10 @@
 My dotfiles configuration files.
 
 ```sh
-stow -t ~ rofi
-stow -t ~ polybar
-stow -t ~ i3
 stow -t ~ tmux
 stow -t ~ kitty
 stow -t ~ zsh
+stow -t ~ hypr
 
 cp -rp .local/scripts $HOME/
 ```
